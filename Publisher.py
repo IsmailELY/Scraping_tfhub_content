@@ -24,7 +24,8 @@ while True:
             publisher = publisher_links[i]
             publisher_data = {
                 "Name_Publisher": publisher.find_element_by_css_selector('mat-card-title.mat-card-title').text,
-                "Description": publisher.find_element_by_css_selector('mat-card-subtitle.mat-card-subtitle').text}
+                "Link_name": publisher.find_element_by_css_selector('mat-card-subtitle.mat-card-subtitle > h2').text,
+                "Description": publisher.find_element_by_css_selector('mat-card-subtitle.mat-card-subtitle > p').text}
 
             try:
                 publisher_data["Collections"] = publisher.find_element_by_css_selector(
